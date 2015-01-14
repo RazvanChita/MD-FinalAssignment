@@ -15,6 +15,7 @@ public class Welcome extends Activity {
     // Declare Variable
     Button logout;
     Button changePassword;
+    Button weatherButton;
  
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,13 @@ public class Welcome extends Activity {
             public void onClick(View arg0) {
                 // Logout current user
                 ParseUser.logOut();
-                finish();
+               // finish();
+                Intent goBack = new Intent(Welcome.this, LoginSignupActivity.class);
+                startActivity(goBack);
             }
         });
         
-        changePassword = (Button) findViewById(R.id.changePasswordButon);
+        changePassword = (Button) findViewById(R.id.changePasswordButton);
         changePassword.setOnClickListener(new OnClickListener() {
         	 
             public void onClick(View arg0) {
@@ -55,5 +58,17 @@ public class Welcome extends Activity {
             	startActivity(intent);
             }
         });
+        
+        weatherButton = (Button) findViewById(R.id.weatherButton);
+        weatherButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent weatherActivity = new Intent(Welcome.this,WeatherActivity.class);
+				startActivity(weatherActivity);
+				
+			}
+		});
+        
     }
 }

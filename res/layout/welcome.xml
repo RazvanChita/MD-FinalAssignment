@@ -20,21 +20,31 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/changePasswordButon"
+        android:id="@+id/changePasswordButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/logout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44dp"
+        android:layout_alignRight="@+id/txtwelcome"
+        android:layout_alignTop="@+id/txtuser"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="22dp"
         android:text="Change Password" />
 
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
+        android:layout_alignBaseline="@+id/changePasswordButton"
+        android:layout_alignBottom="@+id/changePasswordButton"
+        android:layout_toRightOf="@+id/changePasswordButton"
         android:text="@string/LogoutBtn" />
+
+    <Button
+        android:id="@+id/weatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/changePasswordButton"
+        android:layout_below="@+id/changePasswordButton"
+        android:layout_marginTop="17dp"
+        android:text="Weather" />
  
 </RelativeLayout>
